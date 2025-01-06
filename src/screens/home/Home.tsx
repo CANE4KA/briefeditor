@@ -1,5 +1,4 @@
-import EmojiPicker from 'emoji-picker-react'
-import { Fragment, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { ActionMenu } from '../../components/ActionMenu'
