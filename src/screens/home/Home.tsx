@@ -45,7 +45,7 @@ export const Home = () => {
 							document.getElementById('editableDiv')?.innerHTML || ''
 						)
 					}
-					className='resize-none h-52 outline-none bg-transparent placeholder:text-dark-300 p-2 border border-dark-200 rounded'
+					className='resize-none h-52 outline-none bg-transparent placeholder:text-dark-300 p-2 border border-dark-200 rounded text-black'
 				/>
 			</div>
 

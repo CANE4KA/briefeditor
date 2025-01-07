@@ -15,10 +15,11 @@ export const Input = ({ className, title, register, name, ...rest }: Props) => {
 	return (
 		<div className='flex items-center border-b border-dark-200'>
 			<p>{title}</p>
+
 			<input
 				{...register(name, { required: true })}
 				className={twMerge(
-					'w-full outline-none p-2 bg-transparent placeholder:text-dark-300',
+					'w-full outline-none p-2 bg-transparent text-black',
 					className
 				)}
 				{...rest}
