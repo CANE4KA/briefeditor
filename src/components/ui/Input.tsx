@@ -14,7 +14,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = ({ className, title, register, name, ...rest }: Props) => {
 	return (
 		<div className='flex items-center border-b border-dark-200'>
-			<p className='text-dark-400'>{title}</p>
+			<p>{title}</p>
 			<input
 				{...register(name, { required: true })}
 				className={twMerge(

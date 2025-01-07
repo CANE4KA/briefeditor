@@ -11,7 +11,7 @@ export const Button = ({ children, className, isLight, ...rest }: Props) => {
 	return (
 		<button
 			className={twMerge(
-				'text-dark-400 rounded-lg bg-dark-500 transition-colors',
+				'rounded-lg bg-dark-500 transition-colors',
 				isLight
 					? 'bg-transparent hover:text-dark-600'
 					: 'hover:bg-dark-400 px-4 py-2',

@@ -1,10 +1,11 @@
 import EmojiPicker from 'emoji-picker-react'
-import { Bold, Italic, Paperclip, ScanLine, Smile, Trash2 } from 'lucide-react'
+import { Bold, Italic, ScanLine, Smile, Trash2 } from 'lucide-react'
 import { Dispatch, RefObject, SetStateAction } from 'react'
 import { UseFormReset, UseFormSetValue } from 'react-hook-form'
 
 import { FormValues } from '../screens/home/Home'
 
+import { addEmoji } from '../utils/addEmoji'
 import { changeText } from '../utils/changeText'
 
 import { Button } from './ui/Button'
@@ -70,7 +71,10 @@ export const ActionMenu = ({
 					open={isEmojiPickerOpen}
 					width={300}
 					height={350}
-					onEmojiClick={() => setIsEmojiPickerOpen(!isEmojiPickerOpen)}
+					onEmojiClick={emoji => {
+						setIsEmojiPickerOpen(false)
+						addEmoji({ emoji: emoji.emoji, setValue })
+					}}
 				/>
 			</div>
 
@@ -83,11 +87,7 @@ export const ActionMenu = ({
 					<Smile />
 				</Button>
 
-				<Button isLight type='button'>
-					<Paperclip />
-				</Button>
-
-				<Button className='text-dark-200' type='submit'>
+				<Button className='text-white' type='submit'>
 					Send
 				</Button>
 			</div>
