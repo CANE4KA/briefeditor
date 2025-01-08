@@ -29,7 +29,7 @@ export const Home = () => {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className='rounded-xl w-1/2 bg-dark-100 flex flex-col gap-3 form'
+			className='rounded-xl w-[70%] bg-dark-100 flex flex-col gap-3 form'
 		>
 			<div className='flex flex-col p-4 gap-3'>
 				<Input register={register} name='from' title='From:' type='email' />
